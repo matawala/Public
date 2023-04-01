@@ -1,0 +1,11 @@
+---
+- hosts: all
+
+  tasks:
+    - name: Copy file to another directory
+      copy:
+        src: /etc/sudoers
+        dest: /data/tmp
+        owner: sysadmin
+        group: sysadmin
+        mode: 0644
